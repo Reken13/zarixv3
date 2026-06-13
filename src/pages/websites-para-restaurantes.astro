@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Websites para Restaurantes",
+    "description": "Criação de websites profissionais para restaurantes em Aveiro. Menus online, reservas, integração com Google e WhatsApp.",
+    "provider": { "@id": "https://zarix.site/#business" },
+    "areaServed": { "@type": "City", "name": "Aveiro" },
+    "url": "https://zarix.site/websites-para-restaurantes"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://zarix.site/" },
+      { "@type": "ListItem", "position": 2, "name": "Websites para Restaurantes", "item": "https://zarix.site/websites-para-restaurantes" }
+    ]
+  }
+];
+---
+
+<Layout
+  title="Websites para Restaurantes em Aveiro | Zarix"
+  description="Websites profissionais para restaurantes em Aveiro com menu online, reservas e integração WhatsApp. Sem mensalidades de plataforma. Desenvolvido pela Zarix."
+  canonical="https://zarix.site/websites-para-restaurantes"
+  schema={schema}
+>
+  <main class="bg-[#0B0F19] text-slate-100 min-h-screen font-sans selection:bg-blue-500/30 selection:text-blue-200 relative overflow-hidden pt-24 pb-32">
+
+    <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_30%,#000_60%,transparent_100%)] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <nav class="mb-10 font-mono text-xs text-slate-500 flex items-center gap-2">
+        <a href="/" class="hover:text-blue-400 transition-colors">Início</a>
+        <span>/</span>
+        <span class="text-slate-400">Websites para Restaurantes</span>
+      </nav>
+
+      <section class="pb-16 border-b border-slate-800/60 space-y-6 max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs font-mono text-blue-400 tracking-wider">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          Restauração // Website Profissional
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          Websites para Restaurantes<br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-500">
+            que atraem e convertem
+          </span>
+        </h1>
+        <p class="text-slate-400 text-base leading-relaxed max-w-2xl">
+          O Instagram não chega. Os clientes pesquisam no Google antes de escolher onde comer. Um website profissional para o seu restaurante em Aveiro garante que aparecem — e que ficam. Menu digital, botão de reserva e WhatsApp integrado.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 font-mono text-sm">
+            Quero o meu website →
+          </a>
+          <a href="tel:+351967608772" class="inline-flex items-center gap-2 border border-slate-700 hover:border-blue-500/50 text-slate-300 hover:text-white font-mono text-sm py-3 px-6 rounded-lg transition-all duration-300">
+            +351 967 608 772
+          </a>
+        </div>
+      </section>
+
+      <section class="py-16 border-b border-slate-800/60">
+        <div class="mb-10 space-y-2">
+          <span class="font-mono text-xs text-blue-500 uppercase tracking-widest">// Funcionalidades para restauração</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-white">O que o seu restaurante precisa online</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { title: "Menu Digital Atualizado", desc: "Ementa online com fotos, preços e categorias. Atualiza quando quiser, sem depender de ninguém." },
+            { title: "Reservas Online", desc: "Formulário de reserva integrado que envia confirmação automática por email ou WhatsApp." },
+            { title: "WhatsApp Integrado", desc: "Botão de contacto direto pelo WhatsApp em todas as páginas para pedidos e reservas imediatas." },
+            { title: "Google Maps e Horário", desc: "Localização integrada e horário de funcionamento visível — essencial para aparecer nas pesquisas locais." },
+            { title: "Galeria de Pratos", desc: "Imagens profissionais dos seus pratos que despertam o apetite e diferenciam da concorrência." },
+            { title: "SEO Local em Aveiro", desc: "Otimizado para aparecer quando alguém pesquisa 'restaurante em Aveiro' ou 'onde comer em Aveiro'." },
+          ].map(item => (
+            <div class="p-6 bg-slate-950/50 border border-slate-800 rounded-xl hover:border-blue-500/30 transition-colors">
+              <div class="w-2 h-2 rounded-full bg-emerald-500 mb-4"></div>
+              <h3 class="text-white font-bold mb-2">{item.title}</h3>
+              <p class="text-slate-400 text-sm font-mono leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="py-16 border-b border-slate-800/60">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <span class="font-mono text-xs text-blue-500 uppercase tracking-widest">// Porque o Instagram não chega</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-white">O Google traz-lhe clientes. O Instagram não.</h2>
+            <div class="space-y-4 font-mono text-sm text-slate-400">
+              <p class="flex items-start gap-3"><span class="text-red-400 mt-0.5">✗</span> O Instagram não aparece nas pesquisas do Google para "restaurante Aveiro"</p>
+              <p class="flex items-start gap-3"><span class="text-red-400 mt-0.5">✗</span> Sem website, perde clientes para concorrentes que têm um</p>
+              <p class="flex items-start gap-3"><span class="text-red-400 mt-0.5">✗</span> As plataformas de entrega cobram comissões altas em cada pedido</p>
+              <p class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">✓</span> Um website próprio não tem comissões nem mensalidades de plataforma</p>
+              <p class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">✓</span> Aparece no topo do Google para pesquisas locais em Aveiro</p>
+              <p class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">✓</span> Controla totalmente a imagem e informação do seu negócio</p>
+            </div>
+          </div>
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 font-mono text-xs text-slate-500 space-y-3">
+            <p class="text-blue-400 font-bold">$ zarix_audit --restaurante</p>
+            <p class="text-slate-500">// Análise do mercado local...</p>
+            <p class="text-amber-400">[WARN] 73% dos clientes pesquisam online antes de escolher restaurante.</p>
+            <p class="text-amber-400">[WARN] Sem website, o seu restaurante é invisível para o Google.</p>
+            <p class="text-emerald-400 font-bold">[SOLUTION] Website profissional com SEO local → +40% visibilidade.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="pt-16 text-center space-y-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-white">O seu restaurante merece um website à sua altura</h2>
+        <p class="text-slate-400 font-mono text-sm max-w-xl mx-auto">Diagnóstico gratuito. Orçamento sem surpresas. Lançamento em 2–3 semanas.</p>
+        <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 font-mono text-sm">
+          Falar com a Zarix →
+        </a>
+      </section>
+
+    </div>
+  </main>
+</Layout>

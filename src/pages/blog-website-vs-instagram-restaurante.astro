@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Website vs Instagram: O que o seu restaurante realmente precisa?",
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28",
+    "author": { "@type": "Organization", "name": "Zarix" },
+    "publisher": { "@id": "https://zarix.site/#business" },
+    "description": "Descubra por que um restaurante em Aveiro precisa de um website próprio além do Instagram para atrair clientes pelo Google.",
+    "url": "https://zarix.site/blog-website-vs-instagram-restaurante"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://zarix.site/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://zarix.site/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Website vs Instagram para Restaurantes", "item": "https://zarix.site/blog-website-vs-instagram-restaurante" }
+    ]
+  }
+];
+---
+
+<Layout
+  title="Website vs Instagram: O que o seu restaurante precisa? | Zarix"
+  description="Descubra por que um restaurante em Aveiro precisa de um website próprio além do Instagram para aparecer no Google e atrair mais clientes."
+  canonical="https://zarix.site/blog-website-vs-instagram-restaurante"
+  schema={schema}
+>
+  <main class="bg-[#0B0F19] text-slate-100 min-h-screen font-sans selection:bg-blue-500/30 selection:text-blue-200 relative overflow-hidden pt-24 pb-32">
+
+    <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_30%,#000_60%,transparent_100%)] pointer-events-none"></div>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
+
+      <nav class="mb-10 font-mono text-xs text-slate-500 flex items-center gap-2 flex-wrap">
+        <a href="/" class="hover:text-blue-400 transition-colors">Início</a>
+        <span>/</span>
+        <a href="/blog" class="hover:text-blue-400 transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-slate-400">Website vs Instagram</span>
+      </nav>
+
+      <article class="space-y-8">
+        <header class="space-y-4 pb-8 border-b border-slate-800">
+          <div class="flex items-center gap-3 font-mono text-xs text-slate-500">
+            <span class="text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">Websites</span>
+            <span>28 de Maio, 2026</span>
+            <span>· 5 min de leitura</span>
+          </div>
+          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight">
+            Website vs Instagram: O que o seu restaurante realmente precisa?
+          </h1>
+          <p class="text-slate-400 text-base leading-relaxed font-light">
+            Muitos restaurantes em Aveiro têm um Instagram cuidado mas nenhum website. É um erro que custa clientes todos os dias — e que é fácil de corrigir.
+          </p>
+        </header>
+
+        <div class="prose prose-invert prose-slate max-w-none space-y-6 font-light text-slate-300 leading-relaxed">
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">O Instagram não aparece no Google</h2>
+          <p>
+            Quando alguém em Aveiro escreve "restaurante perto de mim" ou "onde comer peixe em Aveiro" no Google, os resultados que aparecem são websites. O Instagram não entra nessa equação. A plataforma é excelente para criar comunidade e mostrar os seus pratos, mas é invisível para o motor de pesquisa mais usado do mundo.
+          </p>
+          <p>
+            Segundo dados do Google, 46% de todas as pesquisas têm intenção local. Isso significa que metade das pessoas que usa o Google está à procura de negócios na sua zona. Se o seu restaurante não tem website, está a perder metade dessas oportunidades.
+          </p>
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">O que um website faz que o Instagram não consegue</h2>
+          <div class="space-y-3 font-mono text-sm">
+            <div class="flex items-start gap-3 p-4 bg-slate-950/50 border border-slate-800 rounded-lg">
+              <span class="text-emerald-400 mt-0.5 shrink-0">✓</span>
+              <div><strong class="text-white">Aparece no Google Maps e pesquisa local</strong> — quando o website está bem configurado com schema markup e Google Business Profile, o restaurante aparece nos resultados locais com estrelas, horário e botão de ligação.</div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-slate-950/50 border border-slate-800 rounded-lg">
+              <span class="text-emerald-400 mt-0.5 shrink-0">✓</span>
+              <div><strong class="text-white">Menu sempre atualizado</strong> — sem depender de stories ou posts que desaparecem. O menu digital fica disponível 24 horas por dia, sem precisar de criar conteúdo constantemente.</div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-slate-950/50 border border-slate-800 rounded-lg">
+              <span class="text-emerald-400 mt-0.5 shrink-0">✓</span>
+              <div><strong class="text-white">Reservas sem comissão</strong> — as plataformas de reserva cobram por cobertura. Com um formulário de reserva próprio, todos os pedidos chegam diretamente ao restaurante.</div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-slate-950/50 border border-slate-800 rounded-lg">
+              <span class="text-emerald-400 mt-0.5 shrink-0">✓</span>
+              <div><strong class="text-white">Credibilidade imediata</strong> — um website profissional transmite seriedade e confiança, especialmente para clientes que ainda não conhecem o restaurante.</div>
+            </div>
+          </div>
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">O Instagram complementa — não substitui</h2>
+          <p>
+            Isto não significa abandonar o Instagram. Pelo contrário — as duas ferramentas funcionam em conjunto. O Instagram atrai e cria relação com clientes. O website converte essa atenção em reservas reais e aparecer para quem ainda não vos segue.
+          </p>
+          <p>
+            A estratégia ideal é: <span class="text-blue-400">Instagram para engagement</span> + <span class="text-emerald-400">website para conversão e SEO local</span>.
+          </p>
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">Quanto custa um website para um restaurante?</h2>
+          <p>
+            O investimento num website profissional para um restaurante é, na maioria dos casos, recuperado nos primeiros meses através de reservas adicionais e novos clientes que chegam pelo Google. Na Zarix, desenvolvemos websites para restaurantes em Aveiro com menu digital, formulário de reserva e SEO local incluído — sem mensalidades de plataforma.
+          </p>
+
+          <div class="mt-10 p-6 bg-blue-500/5 border border-blue-500/20 rounded-xl space-y-3">
+            <p class="font-bold text-white">O seu restaurante em Aveiro ainda não tem website?</p>
+            <p class="text-slate-400 text-sm font-mono">Diagnóstico gratuito e orçamento sem compromisso. Respondemos em menos de 24 horas.</p>
+            <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-2.5 px-5 rounded-lg transition-all duration-300 font-mono text-sm">
+              Falar com a Zarix →
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </main>
+</Layout>

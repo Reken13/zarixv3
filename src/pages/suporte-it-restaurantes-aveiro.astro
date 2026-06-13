@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Suporte IT para Restaurantes em Aveiro",
+    "description": "Suporte informático especializado para restaurantes e cafés em Aveiro. Sistemas de faturação, redes Wi-Fi e suporte a POS.",
+    "provider": { "@id": "https://zarix.site/#business" },
+    "areaServed": { "@type": "City", "name": "Aveiro" },
+    "url": "https://zarix.site/suporte-it-restaurantes-aveiro"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://zarix.site/" },
+      { "@type": "ListItem", "position": 2, "name": "Suporte IT para Restaurantes em Aveiro", "item": "https://zarix.site/suporte-it-restaurantes-aveiro" }
+    ]
+  }
+];
+---
+
+<Layout
+  title="Suporte IT para Restaurantes em Aveiro | Zarix"
+  description="Suporte informático especializado para restaurantes e cafés em Aveiro. Sistemas POS, redes Wi-Fi segregadas e manutenção preventiva para o seu estabelecimento."
+  canonical="https://zarix.site/suporte-it-restaurantes-aveiro"
+  schema={schema}
+>
+  <main class="bg-[#0B0F19] text-slate-100 min-h-screen font-sans selection:bg-blue-500/30 selection:text-blue-200 relative overflow-hidden pt-24 pb-32">
+
+    <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_30%,#000_60%,transparent_100%)] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <nav class="mb-10 font-mono text-xs text-slate-500 flex items-center gap-2">
+        <a href="/" class="hover:text-blue-400 transition-colors">Início</a>
+        <span>/</span>
+        <span class="text-slate-400">Suporte IT para Restaurantes em Aveiro</span>
+      </nav>
+
+      <section class="pb-16 border-b border-slate-800/60 space-y-6 max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs font-mono text-blue-400 tracking-wider">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          Restauração // IT Especializado
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          Suporte IT para Restaurantes<br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-500">
+            em Aveiro
+          </span>
+        </h1>
+        <p class="text-slate-400 text-base leading-relaxed max-w-2xl">
+          Um sistema de faturação bloqueado na hora de ponta pode custar centenas de euros. A Zarix oferece suporte IT especializado para restaurantes, cafés e estabelecimentos de restauração em Aveiro — com foco em sistemas POS, redes Wi-Fi e continuidade de serviço.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 font-mono text-sm">
+            Pedir diagnóstico gratuito →
+          </a>
+          <a href="tel:+351967608772" class="inline-flex items-center gap-2 border border-slate-700 hover:border-blue-500/50 text-slate-300 hover:text-white font-mono text-sm py-3 px-6 rounded-lg transition-all duration-300">
+            +351 967 608 772
+          </a>
+        </div>
+      </section>
+
+      <section class="py-16 border-b border-slate-800/60">
+        <div class="mb-10 space-y-2">
+          <span class="font-mono text-xs text-blue-500 uppercase tracking-widest">// Serviços para restauração</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-white">IT que mantém o seu restaurante a funcionar</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { title: "Sistemas de Faturação (POS)", desc: "Instalação, configuração e suporte a caixas registadoras e software de faturação certificado." },
+            { title: "Rede Wi-Fi Segregada", desc: "Rede separada para clientes e outra para os sistemas internos — sem interferências nem riscos de segurança." },
+            { title: "Impressoras de Cozinha", desc: "Configuração e manutenção de impressoras de tickets para a cozinha e bar integradas com o POS." },
+            { title: "Terminais de Pagamento", desc: "Integração e suporte a terminais Multibanco e sistemas de pagamento sem contacto." },
+            { title: "Backups Automáticos", desc: "Dados de faturação e clientes protegidos com backups automáticos diários na nuvem." },
+            { title: "Suporte de Emergência", desc: "Resposta prioritária em situações críticas durante o horário de serviço. Não perde vendas por falha técnica." },
+          ].map(item => (
+            <div class="p-6 bg-slate-950/50 border border-slate-800 rounded-xl hover:border-blue-500/30 transition-colors">
+              <div class="w-2 h-2 rounded-full bg-blue-500 mb-4"></div>
+              <h3 class="text-white font-bold mb-2">{item.title}</h3>
+              <p class="text-slate-400 text-sm font-mono leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="pt-16 text-center space-y-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-white">O seu restaurante nunca deve parar por falha técnica</h2>
+        <p class="text-slate-400 font-mono text-sm max-w-xl mx-auto">Diagnóstico gratuito ao seu estabelecimento. Sem contratos longos.</p>
+        <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 font-mono text-sm">
+          Falar com a Zarix →
+        </a>
+      </section>
+
+    </div>
+  </main>
+</Layout>

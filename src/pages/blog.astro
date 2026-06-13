@@ -3,41 +3,73 @@ import Layout from '../layouts/Layout.astro';
 
 const posts = [
   {
-    title: "Como proteger o seu negócio local contra Ransomware em 2026",
-    date: "Maio 14, 2026",
-    category: "Cibersegurança",
-    excerpt: "Estratégias críticas de isolamento de rede e políticas de backup invioláveis para PMEs e pequenos comércios situados em Aveiro."
+    title: "Quanto Custa um Website Profissional em Portugal? Guia Completo 2026",
+    date: "13 de Junho, 2026",
+    category: "Websites",
+    excerpt: "Entre o 'faço por 200€' e o 'são 15.000€' existe um espectro enorme. O que determina o preço e o que deve realmente pagar.",
+    slug: "/blog-quanto-custa-website-profissional"
   },
   {
-    title: "Otimização de Redes Wi-Fi para Restauração: Guia Completo",
-    date: "Abril 28, 2026",
+    title: "Chatbots no WhatsApp para Restaurantes: Vale a Pena em 2026?",
+    date: "10 de Junho, 2026",
+    category: "Automação",
+    excerpt: "Análise prática de como os chatbots com IA no WhatsApp Business podem aumentar as reservas e reduzir o trabalho administrativo.",
+    slug: "/blog-chatbots-whatsapp-restaurante"
+  },
+  {
+    title: "5 Problemas de Wi-Fi Empresarial que Custam Dinheiro à Sua Empresa",
+    date: "3 de Junho, 2026",
     category: "Infraestrutura",
-    excerpt: "Por que segmentar a rede dos seus clientes através de VLANs dedicadas evita falhas catastróficas nos sistemas de faturação interna."
-  }
+    excerpt: "Um Wi-Fi instável não é apenas inconveniente — é uma perda real de produtividade e receita. Conheça os problemas mais comuns e como resolvê-los.",
+    slug: "/blog-wifi-empresarial-problemas"
+  },
+  {
+    title: "Website vs Instagram: O que o seu restaurante realmente precisa?",
+    date: "28 de Maio, 2026",
+    category: "Websites",
+    excerpt: "Muitos restaurantes em Aveiro têm um Instagram cuidado mas nenhum website. É um erro que custa clientes todos os dias.",
+    slug: "/blog-website-vs-instagram-restaurante"
+  },
 ];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog Zarix",
+  "description": "Guias práticos sobre IT, websites, cibersegurança e automação para empresas em Aveiro.",
+  "url": "https://zarix.site/blog",
+  "publisher": { "@id": "https://zarix.site/#business" }
+};
 ---
 
-<Layout title="Blog — Zarix" description="Artigos técnicos sobre cibersegurança, infraestrutura de redes, otimização web e automação para empresas em Portugal.">
+<Layout
+  title="Blog — Zarix | IT, Websites e Automação para Empresas em Aveiro"
+  description="Guias práticos sobre cibersegurança, infraestrutura de redes, websites e automação para restaurantes e PMEs em Aveiro."
+  canonical="https://zarix.site/blog"
+  schema={schema}
+>
   <main class="max-w-5xl mx-auto px-6 pt-44 pb-32">
     <div class="mb-24 space-y-4">
       <span class="font-mono text-xs text-blue-500 uppercase tracking-widest block">// Conhecimento Partilhado</span>
       <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white">Notas de Engenharia.</h1>
-      <p class="text-slate-400 font-light text-base">Guias práticos e atualizações sobre segurança, redes e automatização para empresários.</p>
+      <p class="text-slate-400 font-light text-base">Guias práticos sobre IT, websites, redes e automação para empresários em Aveiro.</p>
     </div>
 
     <div class="space-y-16">
       {posts.map((post) => (
-        <article class="group cursor-pointer border-b border-slate-900 pb-12 block">
-          <div class="flex items-center gap-4 text-slate-500 font-mono text-xs mb-4">
-            <span>{post.date}</span>
-            <span>•</span>
-            <span class="text-blue-500">// {post.category}</span>
-          </div>
-          <h2 class="text-2xl md:text-4xl font-black text-slate-300 group-hover:text-white transition-colors tracking-tight leading-tight">
-            {post.title}
-          </h2>
-          <p class="text-slate-400 font-light mt-4 text-base max-w-3xl leading-relaxed">{post.excerpt}</p>
-          <span class="inline-block mt-6 font-mono text-xs text-blue-400 group-hover:text-blue-300">Ler artigo completo →</span>
+        <article class="group border-b border-slate-900 pb-12">
+          <a href={post.slug} class="block">
+            <div class="flex items-center gap-4 text-slate-500 font-mono text-xs mb-4">
+              <span>{post.date}</span>
+              <span>•</span>
+              <span class="text-blue-500">// {post.category}</span>
+            </div>
+            <h2 class="text-2xl md:text-4xl font-black text-slate-300 group-hover:text-white transition-colors tracking-tight leading-tight">
+              {post.title}
+            </h2>
+            <p class="text-slate-400 font-light mt-4 text-base max-w-3xl leading-relaxed">{post.excerpt}</p>
+            <span class="inline-block mt-6 font-mono text-xs text-blue-400 group-hover:text-blue-300">Ler artigo completo →</span>
+          </a>
         </article>
       ))}
     </div>

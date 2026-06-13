@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Chatbots IA para WhatsApp",
+    "description": "Desenvolvimento de chatbots com inteligência artificial para WhatsApp Business. Resposta automática a clientes 24/7 para restaurantes e PMEs.",
+    "provider": { "@id": "https://zarix.site/#business" },
+    "areaServed": "PT",
+    "url": "https://zarix.site/chatbots-ia-whatsapp"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://zarix.site/" },
+      { "@type": "ListItem", "position": 2, "name": "Chatbots IA para WhatsApp", "item": "https://zarix.site/chatbots-ia-whatsapp" }
+    ]
+  }
+];
+---
+
+<Layout
+  title="Chatbots IA para WhatsApp | Zarix"
+  description="Chatbots com inteligência artificial para WhatsApp Business. Resposta automática 24/7, gestão de reservas e pedidos para restaurantes e PMEs em Portugal."
+  canonical="https://zarix.site/chatbots-ia-whatsapp"
+  schema={schema}
+>
+  <main class="bg-[#0B0F19] text-slate-100 min-h-screen font-sans selection:bg-blue-500/30 selection:text-blue-200 relative overflow-hidden pt-24 pb-32">
+
+    <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_30%,#000_60%,transparent_100%)] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <nav class="mb-10 font-mono text-xs text-slate-500 flex items-center gap-2">
+        <a href="/" class="hover:text-blue-400 transition-colors">Início</a>
+        <span>/</span>
+        <span class="text-slate-400">Chatbots IA para WhatsApp</span>
+      </nav>
+
+      <section class="pb-16 border-b border-slate-800/60 space-y-6 max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs font-mono text-emerald-400 tracking-wider">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          MOD_05 // Automação & IA
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          Chatbots com IA<br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-500">
+            para o seu WhatsApp Business
+          </span>
+        </h1>
+        <p class="text-slate-400 text-base leading-relaxed max-w-2xl">
+          O WhatsApp é o canal de comunicação mais usado em Portugal. Um chatbot com IA responde automaticamente aos seus clientes 24 horas por dia — gere reservas, responde a perguntas frequentes e encaminha pedidos urgentes para a equipa. Tudo sem custo adicional de staff.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 font-mono text-sm">
+            Quero o meu chatbot →
+          </a>
+          <a href="tel:+351967608772" class="inline-flex items-center gap-2 border border-slate-700 hover:border-blue-500/50 text-slate-300 hover:text-white font-mono text-sm py-3 px-6 rounded-lg transition-all duration-300">
+            +351 967 608 772
+          </a>
+        </div>
+      </section>
+
+      <section class="py-16 border-b border-slate-800/60">
+        <div class="mb-10 space-y-2">
+          <span class="font-mono text-xs text-blue-500 uppercase tracking-widest">// O que o chatbot faz por si</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-white">Automatização inteligente do WhatsApp Business</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { title: "Resposta Automática 24/7", desc: "O chatbot responde imediatamente a qualquer mensagem, mesmo fora do horário de funcionamento." },
+            { title: "Gestão de Reservas", desc: "Recebe pedidos de reserva, confirma disponibilidade e envia confirmação automática ao cliente." },
+            { title: "Menu e Informações", desc: "Envia o menu, preços, horários e localização automaticamente em resposta a perguntas frequentes." },
+            { title: "Encaminhamento Humano", desc: "Detecta quando a conversa precisa de atenção humana e alerta a equipa em tempo real." },
+            { title: "Integração com Catálogo", desc: "Liga ao catálogo de produtos do WhatsApp Business para vendas e pedidos diretos." },
+            { title: "Personalização Total", desc: "Tom de voz, fluxos de conversa e respostas adaptados à identidade do seu negócio." },
+          ].map(item => (
+            <div class="p-6 bg-slate-950/50 border border-slate-800 rounded-xl hover:border-emerald-500/20 transition-colors">
+              <div class="w-2 h-2 rounded-full bg-emerald-500 mb-4"></div>
+              <h3 class="text-white font-bold mb-2">{item.title}</h3>
+              <p class="text-slate-400 text-sm font-mono leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="py-16 border-b border-slate-800/60">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div class="space-y-4">
+            <span class="font-mono text-xs text-blue-500 uppercase tracking-widest">// Ideal para</span>
+            <h2 class="text-2xl font-bold text-white">Quem beneficia mais de um chatbot WhatsApp</h2>
+            <div class="space-y-3 font-mono text-sm text-slate-400">
+              <p class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">▸</span> Restaurantes com muitos pedidos de informação e reservas por WhatsApp</p>
+              <p class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">▸</span> Clínicas e consultórios com marcação de consultas</p>
+              <p class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">▸</span> Comércios locais com perguntas frequentes sobre horários e produtos</p>
+              <p class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">▸</span> Negócios que perdem vendas porque não respondem fora do horário</p>
+            </div>
+          </div>
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 font-mono text-xs space-y-3">
+            <div class="flex items-center gap-2 text-emerald-400 mb-4">
+              <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+              <span>WhatsApp Business — Online</span>
+            </div>
+            <div class="space-y-3 text-slate-400">
+              <div class="flex gap-2"><span class="text-slate-500">Cliente:</span><span>"Boa tarde, têm mesa para 4 pessoas amanhã às 20h?"</span></div>
+              <div class="flex gap-2 pl-4"><span class="text-emerald-400">Bot:</span><span class="text-slate-300">"Olá! 👋 Temos disponibilidade amanhã às 20h para 4 pessoas. Posso confirmar a reserva no seu nome?"</span></div>
+              <div class="flex gap-2"><span class="text-slate-500">Cliente:</span><span>"Sim, João Silva."</span></div>
+              <div class="flex gap-2 pl-4"><span class="text-emerald-400">Bot:</span><span class="text-slate-300">"✅ Reserva confirmada! João Silva, 4 pessoas, amanhã às 20h. Até amanhã!"</span></div>
+            </div>
+            <p class="text-slate-600 text-[10px] pt-2">// Resposta automática em menos de 5 segundos</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="pt-16 text-center space-y-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-white">Nunca mais perca um cliente por não responder</h2>
+        <p class="text-slate-400 font-mono text-sm max-w-xl mx-auto">Demo gratuita do chatbot adaptada ao seu negócio.</p>
+        <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 font-mono text-sm">
+          Falar com a Zarix →
+        </a>
+      </section>
+
+    </div>
+  </main>
+</Layout>

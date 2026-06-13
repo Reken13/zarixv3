@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Cibersegurança para PMEs",
+    "description": "Proteção de dados, auditorias de segurança e conformidade RGPD para pequenas e médias empresas em Portugal.",
+    "provider": { "@id": "https://zarix.site/#business" },
+    "areaServed": "PT",
+    "url": "https://zarix.site/ciberseguranca-pme"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://zarix.site/" },
+      { "@type": "ListItem", "position": 2, "name": "Cibersegurança para PMEs", "item": "https://zarix.site/ciberseguranca-pme" }
+    ]
+  }
+];
+---
+
+<Layout
+  title="Cibersegurança para PMEs | Zarix Aveiro"
+  description="Proteção de dados, auditorias de segurança e conformidade RGPD para PMEs em Aveiro. Proteja o seu negócio de ransomware, phishing e perda de dados."
+  canonical="https://zarix.site/ciberseguranca-pme"
+  schema={schema}
+>
+  <main class="bg-[#0B0F19] text-slate-100 min-h-screen font-sans selection:bg-blue-500/30 selection:text-blue-200 relative overflow-hidden pt-24 pb-32">
+
+    <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_30%,#000_60%,transparent_100%)] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <nav class="mb-10 font-mono text-xs text-slate-500 flex items-center gap-2">
+        <a href="/" class="hover:text-blue-400 transition-colors">Início</a>
+        <span>/</span>
+        <span class="text-slate-400">Cibersegurança para PMEs</span>
+      </nav>
+
+      <section class="pb-16 border-b border-slate-800/60 space-y-6 max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs font-mono text-red-400 tracking-wider">
+          <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+          MOD_03 // Cibersegurança Activa
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          Cibersegurança para<br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-500">
+            Pequenas e Médias Empresas
+          </span>
+        </h1>
+        <p class="text-slate-400 text-base leading-relaxed max-w-2xl">
+          As PMEs são o alvo preferido dos ciberataques — precisamente porque investem menos em segurança. A Zarix protege o seu negócio com auditorias de segurança, proteção contra ransomware e conformidade RGPD, sem complexidade nem custos de grande empresa.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 font-mono text-sm">
+            Pedir auditoria de segurança →
+          </a>
+          <a href="tel:+351967608772" class="inline-flex items-center gap-2 border border-slate-700 hover:border-blue-500/50 text-slate-300 hover:text-white font-mono text-sm py-3 px-6 rounded-lg transition-all duration-300">
+            +351 967 608 772
+          </a>
+        </div>
+      </section>
+
+      <section class="py-16 border-b border-slate-800/60">
+        <div class="mb-10 space-y-2">
+          <span class="font-mono text-xs text-blue-500 uppercase tracking-widest">// Proteção que as PMEs precisam</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-white">Segurança real, sem jargão desnecessário</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { title: "Auditoria de Vulnerabilidades", desc: "Análise completa dos sistemas, redes e acessos para identificar pontos fracos antes que alguém os explore." },
+            { title: "Proteção Anti-Ransomware", desc: "Backups offsite automáticos e políticas de segurança que garantem recuperação rápida em caso de ataque." },
+            { title: "Conformidade RGPD", desc: "Mapeamento e proteção de dados pessoais de clientes conforme a legislação europeia em vigor." },
+            { title: "Gestão de Palavras-Passe", desc: "Implementação de gestores de passwords e autenticação de dois fatores para toda a equipa." },
+            { title: "Formação da Equipa", desc: "Sensibilização para phishing, engenharia social e boas práticas de segurança no dia a dia." },
+            { title: "Firewall e Filtragem Web", desc: "Configuração de firewalls físicos e virtuais para bloquear tráfego malicioso antes de chegar aos sistemas." },
+          ].map(item => (
+            <div class="p-6 bg-slate-950/50 border border-slate-800 rounded-xl hover:border-red-500/20 transition-colors">
+              <div class="w-2 h-2 rounded-full bg-red-500 mb-4"></div>
+              <h3 class="text-white font-bold mb-2">{item.title}</h3>
+              <p class="text-slate-400 text-sm font-mono leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="py-16 border-b border-slate-800/60 bg-red-950/5 rounded-xl border border-red-900/20 px-8">
+        <div class="space-y-4 max-w-3xl">
+          <span class="font-mono text-xs text-red-400 uppercase tracking-widest">// Ameaças reais para PMEs</span>
+          <h2 class="text-2xl font-bold text-white">O custo de um ataque para uma pequena empresa</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            {[
+              { value: "43%", label: "dos ciberataques visam pequenas empresas" },
+              { value: "60%", label: "das PMEs atacadas fecham em 6 meses" },
+              { value: "€35k", label: "custo médio de um incidente de ransomware" },
+            ].map(stat => (
+              <div class="text-center p-4">
+                <div class="text-3xl font-black text-red-400 font-mono mb-1">{stat.value}</div>
+                <div class="text-slate-400 text-xs font-mono">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="pt-16 text-center space-y-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-white">Proteja o seu negócio antes que seja tarde</h2>
+        <p class="text-slate-400 font-mono text-sm max-w-xl mx-auto">Auditoria de segurança inicial gratuita. Relatório detalhado com prioridades de ação.</p>
+        <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 font-mono text-sm">
+          Falar com a Zarix →
+        </a>
+      </section>
+
+    </div>
+  </main>
+</Layout>

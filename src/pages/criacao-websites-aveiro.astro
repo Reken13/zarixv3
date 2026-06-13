@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Criação de Websites em Aveiro",
+    "description": "Desenvolvimento de websites profissionais e personalizados para empresas em Aveiro. Sem templates genéricos, código limpo e SEO técnico incluído.",
+    "provider": { "@id": "https://zarix.site/#business" },
+    "areaServed": { "@type": "City", "name": "Aveiro" },
+    "url": "https://zarix.site/criacao-websites-aveiro"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://zarix.site/" },
+      { "@type": "ListItem", "position": 2, "name": "Criação de Websites em Aveiro", "item": "https://zarix.site/criacao-websites-aveiro" }
+    ]
+  }
+];
+---
+
+<Layout
+  title="Criação de Websites em Aveiro | Zarix"
+  description="Desenvolvemos websites profissionais e personalizados para empresas em Aveiro. Código limpo, velocidade máxima e SEO técnico incluído. Sem templates genéricos."
+  canonical="https://zarix.site/criacao-websites-aveiro"
+  schema={schema}
+>
+  <main class="bg-[#0B0F19] text-slate-100 min-h-screen font-sans selection:bg-blue-500/30 selection:text-blue-200 relative overflow-hidden pt-24 pb-32">
+
+    <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_30%,#000_60%,transparent_100%)] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-10 font-mono text-xs text-slate-500 flex items-center gap-2">
+        <a href="/" class="hover:text-blue-400 transition-colors">Início</a>
+        <span>/</span>
+        <span class="text-slate-400">Criação de Websites em Aveiro</span>
+      </nav>
+
+      <!-- Hero -->
+      <section class="pb-16 border-b border-slate-800/60 space-y-6 max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs font-mono text-blue-400 tracking-wider">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+          MOD_01 // Websites Personalizados
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          Criação de Websites<br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-blue-500">
+            Profissionais em Aveiro
+          </span>
+        </h1>
+        <p class="text-slate-400 text-base leading-relaxed max-w-2xl">
+          Desenvolvemos websites à medida para empresas, comércios e profissionais em Aveiro. Cada projeto começa do zero — sem templates genéricos, sem limitações de plataformas. Código limpo, velocidade máxima e SEO técnico incluído de raiz.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 font-mono text-sm">
+            Pedir diagnóstico gratuito →
+          </a>
+          <a href="tel:+351967608772" class="inline-flex items-center gap-2 border border-slate-700 hover:border-blue-500/50 text-slate-300 hover:text-white font-mono text-sm py-3 px-6 rounded-lg transition-all duration-300">
+            +351 967 608 772
+          </a>
+        </div>
+      </section>
+
+      <!-- O que está incluído -->
+      <section class="py-16 border-b border-slate-800/60">
+        <div class="mb-10 space-y-2">
+          <span class="font-mono text-xs text-blue-500 uppercase tracking-widest">// O que está incluído</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-white">Tudo o que o seu negócio precisa online</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { title: "Design 100% Personalizado", desc: "Interface criada de raiz para a sua marca, sem templates pré-fabricados ou limitações visuais." },
+            { title: "Velocidade e Core Web Vitals", desc: "Otimização técnica para Lighthouse 95+ e tempos de carregamento abaixo de 1 segundo." },
+            { title: "SEO Técnico Incluído", desc: "Estrutura de URLs, meta tags, schema markup, sitemap e robots.txt configurados corretamente." },
+            { title: "Adaptado a Mobile", desc: "Design responsivo testado em todos os dispositivos — smartphones, tablets e desktop." },
+            { title: "Formulários e Contacto", desc: "Formulários de contacto integrados e ligação direta ao WhatsApp ou email do negócio." },
+            { title: "Manutenção e Suporte", desc: "Acompanhamento pós-lançamento com atualizações e suporte técnico sempre que precisar." },
+          ].map(item => (
+            <div class="p-6 bg-slate-950/50 border border-slate-800 rounded-xl hover:border-blue-500/30 transition-colors">
+              <div class="w-2 h-2 rounded-full bg-blue-500 mb-4"></div>
+              <h3 class="text-white font-bold mb-2">{item.title}</h3>
+              <p class="text-slate-400 text-sm font-mono leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Para quem -->
+      <section class="py-16 border-b border-slate-800/60">
+        <div class="mb-10 space-y-2">
+          <span class="font-mono text-xs text-blue-500 uppercase tracking-widest">// Para quem é este serviço</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-white">Empresas e profissionais em Aveiro</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-4 font-mono text-sm text-slate-400">
+            <p class="flex items-start gap-3"><span class="text-blue-400 mt-0.5">▸</span> Restaurantes e cafés que precisam de presença online profissional</p>
+            <p class="flex items-start gap-3"><span class="text-blue-400 mt-0.5">▸</span> Comércios locais que querem substituir o Instagram como único canal</p>
+            <p class="flex items-start gap-3"><span class="text-blue-400 mt-0.5">▸</span> Clínicas, consultórios e profissionais liberais</p>
+            <p class="flex items-start gap-3"><span class="text-blue-400 mt-0.5">▸</span> PMEs que precisam de um website que converta visitas em clientes</p>
+          </div>
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 font-mono text-xs text-slate-500 space-y-3">
+            <p class="text-blue-400 font-bold">// Por que não usar Wix ou Squarespace?</p>
+            <p>Plataformas genéricas impõem limitações técnicas que prejudicam o SEO, a velocidade e a imagem da marca. Um website personalizado posiciona-se melhor no Google e converte mais visitantes em clientes reais.</p>
+            <p class="text-emerald-400">A Zarix entrega o que as plataformas não conseguem.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="pt-16 text-center space-y-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-white">Pronto para ter um website que trabalha por si?</h2>
+        <p class="text-slate-400 font-mono text-sm max-w-xl mx-auto">Diagnóstico gratuito e sem compromisso. Respondemos em menos de 24 horas.</p>
+        <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 font-mono text-sm">
+          Falar com a Zarix →
+        </a>
+      </section>
+
+    </div>
+  </main>
+</Layout>

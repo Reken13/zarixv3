@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "5 Problemas de Wi-Fi Empresarial que Custam Dinheiro à Sua Empresa",
+    "datePublished": "2026-06-03",
+    "dateModified": "2026-06-03",
+    "author": { "@type": "Organization", "name": "Zarix" },
+    "publisher": { "@id": "https://zarix.site/#business" },
+    "description": "Os problemas de Wi-Fi mais comuns em empresas e restaurantes em Aveiro — e como resolvê-los de forma definitiva.",
+    "url": "https://zarix.site/blog-wifi-empresarial-problemas"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://zarix.site/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://zarix.site/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Problemas de Wi-Fi Empresarial", "item": "https://zarix.site/blog-wifi-empresarial-problemas" }
+    ]
+  }
+];
+---
+
+<Layout
+  title="5 Problemas de Wi-Fi Empresarial que Custam Dinheiro | Zarix"
+  description="Os 5 problemas de Wi-Fi mais comuns em empresas e restaurantes em Aveiro — e como resolvê-los com uma infraestrutura de rede profissional."
+  canonical="https://zarix.site/blog-wifi-empresarial-problemas"
+  schema={schema}
+>
+  <main class="bg-[#0B0F19] text-slate-100 min-h-screen font-sans selection:bg-blue-500/30 selection:text-blue-200 relative overflow-hidden pt-24 pb-32">
+
+    <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_30%,#000_60%,transparent_100%)] pointer-events-none"></div>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
+
+      <nav class="mb-10 font-mono text-xs text-slate-500 flex items-center gap-2 flex-wrap">
+        <a href="/" class="hover:text-blue-400 transition-colors">Início</a>
+        <span>/</span>
+        <a href="/blog" class="hover:text-blue-400 transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-slate-400">Problemas de Wi-Fi Empresarial</span>
+      </nav>
+
+      <article class="space-y-8">
+        <header class="space-y-4 pb-8 border-b border-slate-800">
+          <div class="flex items-center gap-3 font-mono text-xs text-slate-500">
+            <span class="text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">Infraestrutura</span>
+            <span>3 de Junho, 2026</span>
+            <span>· 6 min de leitura</span>
+          </div>
+          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight">
+            5 Problemas de Wi-Fi Empresarial que Custam Dinheiro à Sua Empresa
+          </h1>
+          <p class="text-slate-400 text-base leading-relaxed font-light">
+            Um Wi-Fi instável não é apenas inconveniente — é uma perda real de produtividade e receita. Conheça os problemas mais comuns e como resolvê-los de forma definitiva.
+          </p>
+        </header>
+
+        <div class="prose prose-invert prose-slate max-w-none space-y-6 font-light text-slate-300 leading-relaxed">
+
+          <div class="p-5 bg-amber-500/5 border border-amber-500/20 rounded-xl font-mono text-sm">
+            <span class="text-amber-400 font-bold">[AVISO]</span> Se o seu negócio usa um router doméstico para gerir o Wi-Fi empresarial, já está a perder dinheiro.
+          </div>
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">1. Router doméstico num ambiente empresarial</h2>
+          <p>
+            É o erro mais comum. Os routers fornecidos pelos operadores de telecomunicações são projetados para habitações com 3–4 utilizadores. Num restaurante ou escritório com 10, 20 ou 50 dispositivos simultâneos, o equipamento simplesmente não aguenta — e começa a falhar nas horas de maior afluência.
+          </p>
+          <p>
+            <strong class="text-white">A solução:</strong> Substituir por um access point empresarial Ubiquiti ou Cisco, dimensionado para o número real de dispositivos e para a área do espaço.
+          </p>
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">2. Clientes e sistemas internos na mesma rede</h2>
+          <p>
+            Quando os clientes de um restaurante acedem à mesma rede Wi-Fi que os terminais de pagamento e o sistema de faturação, criam-se dois problemas: risco de segurança e degradação de desempenho. Um dispositivo comprometido na rede de clientes pode aceder a dados sensíveis.
+          </p>
+          <p>
+            <strong class="text-white">A solução:</strong> Criar VLANs separadas — uma rede para clientes (com largura de banda limitada) e outra rede interna para os sistemas de trabalho, completamente isoladas.
+          </p>
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">3. Pontos cegos na cobertura do espaço</h2>
+          <p>
+            Espaços com mais de 80m² raramente têm cobertura Wi-Fi uniforme com um único router. Zonas mortas causam desligamentos constantes dos dispositivos móveis das equipas — o que interrompe o trabalho e frustra clientes que tentam usar a internet.
+          </p>
+          <p>
+            <strong class="text-white">A solução:</strong> Mapeamento do espaço e instalação de múltiplos access points posicionados estrategicamente, todos geridos por um controlador central.
+          </p>
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">4. Falta de monitorização e alertas</h2>
+          <p>
+            Sem ferramentas de monitorização, um problema de rede só é descoberto quando alguém reclama ou o sistema falha completamente. A abordagem reativa custa sempre mais — em tempo parado e em reparação de urgência.
+          </p>
+          <p>
+            <strong class="text-white">A solução:</strong> Sistema de gestão centralizada com alertas automáticos quando um dispositivo de rede apresenta anomalias, antes que o problema afete o negócio.
+          </p>
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">5. Falta de redundância de ligação</h2>
+          <p>
+            Uma queda do operador de telecomunicações pode parar completamente um negócio que depende de ligação à internet para faturação, POS ou comunicações. Sem um plano B, o prejuízo pode atingir centenas de euros por hora.
+          </p>
+          <p>
+            <strong class="text-white">A solução:</strong> Configurar failover automático com um segundo operador ou ligação 4G/5G como backup, que ativa automaticamente quando a ligação principal cai.
+          </p>
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">Como resolver estes problemas em Aveiro</h2>
+          <p>
+            A Zarix faz auditorias de rede gratuitas em Aveiro. Analisamos a infraestrutura atual, identificamos os problemas e propomos uma solução dimensionada para o seu espaço e orçamento — sem compromisso.
+          </p>
+
+          <div class="mt-10 p-6 bg-blue-500/5 border border-blue-500/20 rounded-xl space-y-3">
+            <p class="font-bold text-white">A sua rede empresarial em Aveiro precisa de atenção?</p>
+            <p class="text-slate-400 text-sm font-mono">Diagnóstico de rede gratuito. Relatório com prioridades e orçamento transparente.</p>
+            <a href="/redes-wifi-empresas-aveiro" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-2.5 px-5 rounded-lg transition-all duration-300 font-mono text-sm">
+              Saber mais sobre redes empresariais →
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </main>
+</Layout>

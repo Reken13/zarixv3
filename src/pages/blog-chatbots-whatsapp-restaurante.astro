@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Chatbots no WhatsApp para Restaurantes: Vale a Pena em 2026?",
+    "datePublished": "2026-06-10",
+    "dateModified": "2026-06-10",
+    "author": { "@type": "Organization", "name": "Zarix" },
+    "publisher": { "@id": "https://zarix.site/#business" },
+    "description": "Análise prática de como os chatbots com IA no WhatsApp Business podem aumentar as reservas e reduzir o trabalho administrativo em restaurantes.",
+    "url": "https://zarix.site/blog-chatbots-whatsapp-restaurante"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://zarix.site/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://zarix.site/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Chatbots WhatsApp para Restaurantes", "item": "https://zarix.site/blog-chatbots-whatsapp-restaurante" }
+    ]
+  }
+];
+---
+
+<Layout
+  title="Chatbots WhatsApp para Restaurantes: Vale a Pena? | Zarix"
+  description="Análise prática de como os chatbots com IA no WhatsApp Business aumentam reservas e reduzem trabalho administrativo em restaurantes em Portugal."
+  canonical="https://zarix.site/blog-chatbots-whatsapp-restaurante"
+  schema={schema}
+>
+  <main class="bg-[#0B0F19] text-slate-100 min-h-screen font-sans selection:bg-blue-500/30 selection:text-blue-200 relative overflow-hidden pt-24 pb-32">
+
+    <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_30%,#000_60%,transparent_100%)] pointer-events-none"></div>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
+
+      <nav class="mb-10 font-mono text-xs text-slate-500 flex items-center gap-2 flex-wrap">
+        <a href="/" class="hover:text-blue-400 transition-colors">Início</a>
+        <span>/</span>
+        <a href="/blog" class="hover:text-blue-400 transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-slate-400">Chatbots WhatsApp para Restaurantes</span>
+      </nav>
+
+      <article class="space-y-8">
+        <header class="space-y-4 pb-8 border-b border-slate-800">
+          <div class="flex items-center gap-3 font-mono text-xs text-slate-500">
+            <span class="text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Automação</span>
+            <span>10 de Junho, 2026</span>
+            <span>· 5 min de leitura</span>
+          </div>
+          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight">
+            Chatbots no WhatsApp para Restaurantes: Vale a Pena em 2026?
+          </h1>
+          <p class="text-slate-400 text-base leading-relaxed font-light">
+            Em Portugal, o WhatsApp é o canal de comunicação preferido para contactar um restaurante. Um chatbot com IA pode transformar cada mensagem em reserva — sem esforço humano adicional.
+          </p>
+        </header>
+
+        <div class="prose prose-invert prose-slate max-w-none space-y-6 font-light text-slate-300 leading-relaxed">
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">A realidade dos restaurantes portugueses no WhatsApp</h2>
+          <p>
+            Quantas mensagens do WhatsApp o seu restaurante recebe por dia? E quantas ficam sem resposta durante horas, especialmente fora do horário de serviço? Em Portugal, mais de 90% da população usa WhatsApp ativamente. Quando um cliente quer fazer uma reserva às 23h, e o restaurante não responde até às 9h do dia seguinte, há uma boa probabilidade de ele ter reservado noutro lugar.
+          </p>
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">O que um chatbot com IA consegue fazer</h2>
+          <p>
+            Os chatbots modernos já não são simples menus de opções. Com IA generativa, conseguem compreender linguagem natural e responder de forma contextualizada. Para um restaurante, isso significa:
+          </p>
+          <div class="space-y-3 font-mono text-sm">
+            {[
+              ["Gestão de reservas 24/7", "Recebe o pedido, verifica disponibilidade e confirma automaticamente — sem intervenção humana."],
+              ["Respostas a perguntas frequentes", "Horários, localização, menu, alergénios, estacionamento — responde instantaneamente."],
+              ["Envio do menu digital", "Partilha o menu em PDF ou link quando solicitado."],
+              ["Encaminhamento para a equipa", "Quando a situação é complexa, transfere a conversa para um humano em tempo real."],
+              ["Confirmações e lembretes", "Envia confirmação de reserva e lembrete automático no dia anterior."],
+            ].map(([title, desc]) => (
+              <div class="flex items-start gap-3 p-4 bg-slate-950/50 border border-slate-800 rounded-lg">
+                <span class="text-emerald-400 mt-0.5 shrink-0">▸</span>
+                <div><strong class="text-white">{title}:</strong> {desc}</div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">Resultados práticos: o que os nossos clientes reportam</h2>
+          <p>
+            Os restaurantes que implementaram chatbots WhatsApp com a Zarix reportam consistentemente três melhorias principais:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-sm text-center">
+            {[
+              { value: "+35%", label: "reservas confirmadas fora do horário" },
+              { value: "-60%", label: "tempo gasto em mensagens repetitivas" },
+              { value: "< 5s", label: "tempo médio de resposta ao cliente" },
+            ].map(stat => (
+              <div class="p-5 bg-slate-950/50 border border-slate-800 rounded-xl">
+                <div class="text-2xl font-black text-emerald-400 mb-1">{stat.value}</div>
+                <div class="text-slate-400 text-xs">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-xl font-bold text-white mt-10 mb-4">Vale a pena para o meu restaurante?</h2>
+          <p>
+            Um chatbot WhatsApp faz sentido se o seu restaurante recebe regularmente mensagens fora do horário de funcionamento, se a equipa passa tempo significativo a responder às mesmas perguntas, ou se as reservas por WhatsApp são uma parte importante do negócio.
+          </p>
+          <p>
+            Para restaurantes com menos de 5 mesas e muito pouco tráfego de mensagens, o investimento pode não compensar de imediato. Para todos os outros, o retorno é rápido.
+          </p>
+
+          <div class="mt-10 p-6 bg-emerald-500/5 border border-emerald-500/20 rounded-xl space-y-3">
+            <p class="font-bold text-white">Quer ver uma demo do chatbot para o seu restaurante?</p>
+            <p class="text-slate-400 text-sm font-mono">Configuramos uma demo personalizada com o nome e a identidade do seu negócio — sem compromisso.</p>
+            <a href="/chatbots-ia-whatsapp" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-2.5 px-5 rounded-lg transition-all duration-300 font-mono text-sm">
+              Saber mais sobre chatbots WhatsApp →
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </main>
+</Layout>
