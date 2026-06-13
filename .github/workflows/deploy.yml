@@ -27,13 +27,53 @@ jobs:
       - name: Build Astro
         run: npx astro build
 
+      - name: Install paramiko
+        run: pip install paramiko
+
       - name: Deploy via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: '22'
-          local_path: './dist/*'
-          remote_path: ${{ secrets.FTP_SERVER_DIR }}
-          sftp_only: true
+        env:
+          SFTP_SERVER: ${{ secrets.FTP_SERVER }}
+          SFTP_USER: ${{ secrets.FTP_USERNAME }}
+          SFTP_PASS: ${{ secrets.FTP_PASSWORD }}
+          SFTP_DIR: ${{ secrets.FTP_SERVER_DIR }}
+        run: |
+          python3 << 'PYEOF'
+          import os, paramiko
+          from pathlib import Path
+
+          host     = os.environ['SFTP_SERVER']
+          user     = os.environ['SFTP_USER']
+          password = os.environ['SFTP_PASS']
+          remote   = os.environ['SFTP_DIR'].rstrip('/')
+          local    = Path('./dist')
+
+          print(f"Connecting to {host}:22 ...")
+          t = paramiko.Transport((host, 22))
+          t.connect(username=user, password=password)
+          sftp = paramiko.SFTPClient.from_transport(t)
+          print("Connected!")
+
+          def ensure_dir(path):
+              try:
+                  sftp.stat(path)
+              except FileNotFoundError:
+                  parent = os.path.dirname(path)
+                  if parent and parent != path:
+                      ensure_dir(parent)
+                  sftp.mkdir(path)
+
+          def upload(local_path, remote_path):
+              ensure_dir(remote_path)
+              for item in sorted(local_path.iterdir()):
+                  r = f"{remote_path}/{item.name}"
+                  if item.is_dir():
+                      upload(item, r)
+                  else:
+                      print(f"  {item.relative_to(local)} -> {r}")
+                      sftp.put(str(item), r)
+
+          upload(local, remote)
+          sftp.close()
+          t.close()
+          print("Deploy complete!")
+          PYEOF
