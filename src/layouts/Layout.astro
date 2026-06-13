@@ -1,0 +1,197 @@
+---
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.jsx';
+import PrivacyModal from '../components/PrivacyModal.jsx';
+import TermsModal from '../components/TermsModal.jsx';
+import WhatsappFloat from '../components/WhatsappFloat.jsx';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+  schema?: object | object[];
+}
+
+const {
+  title,
+  description = "Suporte IT e criação de websites para restaurantes e PMEs em Aveiro.",
+  ogImage = "https://zarix.site/og-image.png",
+  canonical,
+  schema,
+} = Astro.props;
+
+const canonicalURL = canonical ?? Astro.url.href;
+---
+
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth bg-[#07090e]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#09090f" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- DNS prefetch -->
+    <link rel="dns-prefetch" href="https://formspree.io" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.gstatic.com/s/dmsans/v17/rP2Hp2ywxg089UriCZOIHQ.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" hreflang="pt-PT" href={canonicalURL} />
+    <link rel="alternate" hreflang="x-default" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content={ogImage} />
+
+    <title>{title}</title>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WL0GVH0WDH"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WL0GVH0WDH');
+    </script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript" is:inline>
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window,document,"clarity","script","x6dfcd3uz9");
+    </script>
+
+    <!-- LocalBusiness schema (todas as páginas) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://zarix.site/#business",
+      "name": "Zarix",
+      "description": "Suporte IT e criação de websites para restaurantes e PMEs em Aveiro.",
+      "url": "https://zarix.site/",
+      "telephone": "+351967608772",
+      "email": "info@zarix.site",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Aveiro",
+        "addressRegion": "Aveiro",
+        "addressCountry": "PT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.6405,
+        "longitude": -8.6538
+      },
+      "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "9",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }],
+      "sameAs": [
+        "https://www.instagram.com/zarix_it/",
+        "https://maps.app.goo.gl/h575eGRsNkdjP4rW8"
+      ]
+    })} />
+
+    <!-- Page-specific schemas passed as prop -->
+    {schema && (
+      Array.isArray(schema)
+        ? schema.map((s: object) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)
+        : <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+  </head>
+  <body class="text-white font-sans antialiased selection:bg-blue-500/20">
+
+    <Navbar client:load />
+
+    <slot />
+
+    <Footer client:load />
+
+    <PrivacyModal client:load />
+    <TermsModal client:load />
+
+    <WhatsappFloat client:idle />
+
+    <script>
+      import Lenis from 'lenis';
+
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true
+      });
+
+      function raf(time: number) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    </script>
+
+    <!-- GA4 conversion events -->
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href^="tel:"]').forEach(function(a) {
+          a.addEventListener('click', function() {
+            gtag('event', 'phone_call', { event_category: 'contact', event_label: 'tel_click' });
+          });
+        });
+        document.querySelectorAll('a[href*="#contact"]').forEach(function(a) {
+          a.addEventListener('click', function() {
+            gtag('event', 'cta_click', { event_category: 'contact', event_label: a.textContent.trim().substring(0, 50) });
+          });
+        });
+        document.querySelectorAll('a[href*="wa.me"]').forEach(function(a) {
+          a.addEventListener('click', function() {
+            gtag('event', 'whatsapp_click', { event_category: 'contact', event_label: 'whatsapp' });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  :root { --font-sans: 'Plus Jakarta Sans', sans-serif; --font-mono: 'JetBrains Mono', sans-serif; }
+  body { font-family: var(--font-sans); }
+</style>

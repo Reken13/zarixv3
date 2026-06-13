@@ -3,7 +3,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "clean": "if exist .astro rmdir /s /q .astro && if exist dist rmdir /s /q dist",
+    "clean": "rm -rf .astro dist",
     "prebuild": "npm run clean"
   },
   "dependencies": {

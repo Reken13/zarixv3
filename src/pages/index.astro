@@ -1,8 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const homeSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://zarix.site/#website",
+    "url": "https://zarix.site/",
+    "name": "Zarix — Suporte IT e Websites para PMEs em Aveiro",
+    "inLanguage": "pt-PT",
+    "publisher": { "@id": "https://zarix.site/#business" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quanto custa o suporte IT mensal para uma pequena empresa em Aveiro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O custo depende das necessidades reais da empresa. A Zarix oferece planos Básico e Pro, sem contratos longos. O valor é definido após um diagnóstico gratuito e sem compromisso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A Zarix faz websites para restaurantes em Aveiro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Desenvolvemos websites personalizados para restaurantes e PMEs em Aveiro, com foco em velocidade, SEO local e conversão. Sem templates genéricos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual o tempo de resposta do suporte técnico da Zarix?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Zarix garante um SLA com resposta em menos de 2 horas úteis para clientes com plano de suporte ativo."
+        }
+      }
+    ]
+  }
+];
 ---
 
-<Layout title="Zarix — Engenharia Digital & Soluções Premium IT" description="Sistemas nativos blindados, processamento de dados massivos e algoritmos de alta eficiência em Aveiro. Websites, Infraestrutura, Cibersegurança e Automação SaaS.">
+<Layout
+  title="Zarix — Suporte IT e Websites para PMEs em Aveiro"
+  description="Suporte IT e criação de websites para restaurantes e PMEs em Aveiro. Diagnóstico gratuito, sem contratos longos."
+  canonical="https://zarix.site/"
+  schema={homeSchema}
+>
   <main class="bg-[#0B0F19] text-slate-100 min-h-screen font-sans selection:bg-blue-500/30 selection:text-blue-200 relative overflow-hidden">
 
     <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_30%,#000_60%,transparent_100%)] pointer-events-none"></div>
@@ -21,6 +68,7 @@ import Layout from '../layouts/Layout.astro';
             Sem Parches, Sem Caos.
           </span>
         </h1>
+        <p class="text-blue-400/80 font-mono text-sm tracking-wide">O informático do seu negócio em Aveiro</p>
         <p class="text-slate-400 text-lg max-w-xl font-mono text-sm leading-relaxed">
           Sistemas nativos blindados, processamento de dados massivos e algoritmos de alta eficiência para marcas que exigem desempenho absoluto.
         </p>
@@ -439,6 +487,9 @@ import Layout from '../layouts/Layout.astro';
         `==================================================`
       );
 
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'generate_lead', { event_category: 'contact', event_label: 'form_submit' });
+      }
       window.location.href = `mailto:geral@zarix.site?subject=${mailtoSubject}&body=${mailtoBody}`;
     });
   });
